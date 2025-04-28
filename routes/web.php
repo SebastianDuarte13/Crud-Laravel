@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+route::get('/libros/crear', [App\Http\Controllers\LibrosController::class, 'crear'])->name('libros.crear');
+route::post('/libros/store', [App\Http\Controllers\LibrosController::class, 'store'])->name('libros.store');
